@@ -43,7 +43,7 @@ public class BloomFilterTest {
         int hashOne = bloomFilter.generateFourByteHash(word.getBytes(UTF_8));
         int hashTwo = bloomFilter.generateFourByteHash(word.getBytes(UTF_8));
 
-        assertEquals(hashOne, hashTwo);
+        assertEquals(hashTwo, hashOne);
     }
 
     @Test
