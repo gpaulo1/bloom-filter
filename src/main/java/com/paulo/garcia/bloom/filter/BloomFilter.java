@@ -47,9 +47,9 @@ public class BloomFilter {
         byte[] digestFunction = this.digestFunction.digest(data);
         
         int hashCode = 0;
-        for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < 4; i++) {
             hashCode <<= 8;
-            hashCode |= ((int) digestFunction[j]) & 0xFF;
+            hashCode |= ((int) digestFunction[i]) & 0xFF;
         }
         return hashCode;
     }
